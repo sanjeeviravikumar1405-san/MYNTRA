@@ -32,7 +32,7 @@ test('Add highest-rated iPhone 17 Pro to cart', async ({ page }) => {
     const maxRating = Math.max(...ratings);
 
     console.log('Maximum rating:', maxRating);
-    console.log ();
+    console.log (add);
 
 
  await page.locator(`//span[contains(text(),"iPhone 17 Pro") and not(contains(text(),"Pro Max"))]/ancestor::div[@data-cy="title-recipe"]/following-sibling::div[@data-cy="reviews-block"]/descendant::span[contains(@class,"a-size-small") and text()="${maxRating.toFixed(1)}"]/ancestor::div[@role="listitem"]/descendant::input[@aria-label="Add to cart"]`).first().click();
